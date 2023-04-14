@@ -117,3 +117,17 @@ se come numeri ad esemio ho 2 e 4 devo inserire in un array nuovo l'elemento in 
 La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra i due numeri.
 Usiamo i nuovi metodi degli array foreach o filter.
 */
+
+const object = [
+  1,4,{nomi: {anna, laura, martina, veronica}}
+]
+
+const nomeMezzo = object.nomi.filter((nomi) => {
+  if(nomi.lenght < 4 && nomi.lenght > 1){
+
+    return true;
+  }
+  return false
+})
+
+console.log(nomeMezzo);
