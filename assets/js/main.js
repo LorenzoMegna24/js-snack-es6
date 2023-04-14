@@ -25,8 +25,27 @@ const bici = [
 
 console.log(bici);
 
+bici.forEach((element) => {
+  
+  console.log(element);
 
+  //let pesoMinore = Math.min(Math, element.peso)
 
+  //console.log(pesoMinore);
+
+})
+
+const pesoMinore = bici.reduce((previous, current) => {
+  return current.peso < previous.peso ? current : previous;
+});
+
+console.log("peso minore è", pesoMinore);
+
+const pesoBiciCercata = document.querySelector(".peso-bici")
+
+pesoBiciCercata.innerHTML += `
+      <p>La bici che pesa meno è la ${pesoMinore.nome} che pesa ${pesoMinore.   peso}kg</p>
+  `
 
 
 
@@ -40,6 +59,8 @@ Generare numeri random al posto degli 0 nelle proprietà:
 Punti fatti e falli subiti.
 Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
 */
+
+
 /*
 Snack 3
 Scrivere una funzione che accetti tre argomenti, un array e due numeri (a più piccolo di b).
