@@ -119,10 +119,10 @@ Usiamo i nuovi metodi degli array foreach o filter.
 */
 
 const object = [
-  1,4,{nomi: {anna, laura, martina, veronica}}
+  1,4,{nomi: ["anna", "laura", "martina", "veronica"]}
 ]
-
-const nomeMezzo = object.nomi.filter((nomi) => {
+console.log(object);
+const nomeMezzo = object.filter((nomi) => {
   if(nomi.lenght < 4 && nomi.lenght > 1){
 
     return true;
