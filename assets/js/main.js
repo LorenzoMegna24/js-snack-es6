@@ -85,13 +85,15 @@ const squadre = [
 
 console.log(squadre);
 
-// squadre.forEach((element)=>{
-//   let punti = element.punti 
-//    let random = Math.floor(Math.random() * 90)
-//    let puntiRandom = punti.replace(punti, random )
-//   console.log(puntiRandom);
+ squadre.forEach((element)=>{
 
-// })
+   element.punti = Math.floor(Math.random() * 90)
+  element.falliSubiti = Math.floor(Math.random() * 90)
+
+ })
+
+
+
 
 const arrayFinale = squadre.map((element) => {
   let nomeFalli = {
