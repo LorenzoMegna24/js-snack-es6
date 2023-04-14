@@ -25,15 +25,15 @@ const bici = [
 
 console.log(bici);
 
-bici.forEach((element) => {
+// bici.forEach((element) => {
   
-  console.log(element);
+//   console.log(element);
 
-  //let pesoMinore = Math.min(Math, element.peso)
+//    let pesoMinore = Math.min(Math, element.peso)
 
-  //console.log(pesoMinore);
+//    console.log(pesoMinore);
 
-})
+// })
 
 const pesoMinore = bici.reduce((previous, current) => {
   return current.peso < previous.peso ? current : previous;
@@ -44,7 +44,7 @@ console.log("peso minore è", pesoMinore);
 const pesoBiciCercata = document.querySelector(".peso-bici")
 
 pesoBiciCercata.innerHTML += `
-      <p>La bici che pesa meno è la ${pesoMinore.nome} che pesa ${pesoMinore.   peso}kg</p>
+      <p>La bici che pesa meno è la ${pesoMinore.nome} che pesa ${pesoMinore.peso}kg</p>
   `
 
 
@@ -59,6 +59,52 @@ Generare numeri random al posto degli 0 nelle proprietà:
 Punti fatti e falli subiti.
 Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
 */
+
+const squadre = [
+  {
+    nome: "Inter",
+    punti: 0,
+    falliSubiti: 0,
+  },
+  {
+    nome: "Milan",
+    punti: 0,
+    falliSubiti: 0,
+  },
+  {
+    nome: "Roma",
+    punti: 0,
+    falliSubiti: 0,
+  },
+  {
+    nome: "Juve",
+    punti: 0,
+    falliSubiti: 0,
+  },
+]
+
+console.log(squadre);
+
+// squadre.forEach((element)=>{
+//   let punti = element.punti 
+//    let random = Math.floor(Math.random() * 90)
+//    let puntiRandom = punti.replace(punti, random )
+//   console.log(puntiRandom);
+
+// })
+
+const arrayFinale = squadre.map((element) => {
+  let nomeFalli = {
+    nome: element.nome,
+    falli: element.falliSubiti
+  };
+  return nomeFalli
+
+})
+
+console.log(arrayFinale);
+
+
 
 
 /*
