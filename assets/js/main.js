@@ -118,16 +118,14 @@ La funzione ritornerà un nuovo array con i valori che hanno la posizione compre
 Usiamo i nuovi metodi degli array foreach o filter.
 */
 
-const object = [
-  1,4,{nomi: ["anna", "laura", "martina", "veronica"]}
-]
-console.log(object);
-const nomeMezzo = object.filter((nomi) => {
-  if(nomi.lenght < 4 && nomi.lenght > 1){
+const arrayNomi = ["anna", "laura", "martina", "veronica", "lorenzo", "simone"]
+console.log(arrayNomi);
+let min = parseInt(prompt(`Scegli un numero da 0 a ${arrayNomi.length - 1}`));
+let max = parseInt(prompt(`Scegli un numero da 0 a ${arrayNomi.length - 1}`));
 
-    return true;
-  }
-  return false
+let nomiFiltrato = arrayNomi.filter((element, index)=>{
+  if( min < index && max > index )
+  return element
 })
 
-console.log(nomeMezzo);
+console.log(nomiFiltrato);
