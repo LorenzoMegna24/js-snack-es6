@@ -123,9 +123,15 @@ console.log(arrayNomi);
 let min = parseInt(prompt(`Scegli un numero da 0 a ${arrayNomi.length - 1}`));
 let max = parseInt(prompt(`Scegli un numero da 0 a ${arrayNomi.length - 1}`));
 
-let nomiFiltrato = arrayNomi.filter((element, index)=>{
-  if( min < index && max > index )
-  return element
-})
+function myFunction(array, x, y) {
 
-console.log(nomiFiltrato);
+  let nomiFiltrato = array.filter((element, index)=>{
+    if( x < index && y > index )
+      return element
+  })
+
+  return nomiFiltrato
+
+}
+
+console.log(myFunction(arrayNomi, min, max));
